@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import SimpleSchema from 'simpl-schema';
 import BaseCollection from '/imports/api/base/BaseCollection';
 import { Interests } from '/imports/api/interest/InterestCollection';
@@ -27,6 +28,7 @@ class ProfileCollection extends BaseCollection {
       interests: { type: Array, optional: true },
       'interests.$': { type: String },
       title: { type: String, optional: true },
+      location: { type: String, optional: true },
       picture: { type: SimpleSchema.RegEx.Url, optional: true },
       github: { type: SimpleSchema.RegEx.Url, optional: true },
       facebook: { type: SimpleSchema.RegEx.Url, optional: true },
@@ -55,12 +57,12 @@ class ProfileCollection extends BaseCollection {
    * if one or more interests are not defined, or if github, facebook, and instagram are not URLs.
    * @returns The newly created docID.
    */
-  define({ firstName = '', lastName = '', username, bio = '', interests = [], picture = '', title = '', github = '',
-      facebook = '', instagram = '' }) {
+  define({ firstName = '', lastName = '', username, bio = '', interests = [], picture = '', title = '',
+           location = '', github = '', facebook = '', instagram = '' }) {
     // make sure required fields are OK.
     const checkPattern = { firstName: String, lastName: String, username: String, bio: String, picture: String,
-      title: String };
-    check({ firstName, lastName, username, bio, picture, title }, checkPattern);
+      title: String, location: String };
+    check({ firstName, lastName, username, bio, picture, title, location }, checkPattern);
 
     if (this.find({ username }).count() > 0) {
       throw new Meteor.Error(`${username} is previously defined in another Profile`);
@@ -74,7 +76,7 @@ class ProfileCollection extends BaseCollection {
       throw new Meteor.Error(`${interests} contains duplicates`);
     }
 
-    return this._collection.insert({ firstName, lastName, username, bio, interests, picture, title, github,
+    return this._collection.insert({ firstName, lastName, username, bio, interests, picture, title, location, github,
       facebook, instagram });
   }
 
@@ -92,6 +94,7 @@ class ProfileCollection extends BaseCollection {
     const interests = doc.interests;
     const picture = doc.picture;
     const title = doc.title;
+    const location = doc.location;
     const github = doc.github;
     const facebook = doc.facebook;
     const instagram = doc.instagram;
