@@ -1,63 +1,34 @@
-<template name="Landing_Page">
 
-  <div class="landing-section-1">
-    <div class="ui grid">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
+  <link rel = "stylesheet" type = "text/css" href = "style.css" />
+</head>
 
-      <div class="row">
-        <div class="ui right aligned sixteen wide column">
-          {{> Cas_Login }}
-        </div>
 
-      </div>
-      <div class="row">
-        <div class="ui center aligned sixteen wide column">
-          <h1 class="landing-section-1-welcome">Welcome to BowFolios</h1>
-          <h3 class="landing-section-1-tagline">Professional portfolios and networking for the University of Hawaii community</h3>
-        </div>
-      </div>
+<body>
+
+  <div class="ui three centered row container">
+
+    <div class="row">
+      <h1 style="text-align: center; color: white; font-size: 35px; padding-top: 20px; padding-bottom: 15px"> UH FLASH FINDER </h1>
     </div>
-  </div>
 
-  <div class="landing-section-2">
-    <div class="ui grid">
-      <div class="ui eight wide column">
-        <img class="ui centered medium image" src="/images/profile.png">
-      </div>
-      <div class="ui eight wide middle aligned column">
-        <h1 class="landing-section-header">Create your portfolio.</h1>
-        <h1 class="landing-section-header">Specify your interests.</h1>
-      </div>
+    <div class="row">
+      <h3 style="text-align: center; color: white; font-size: 25px; padding-top: 15px; padding-bottom: 20px;"> Find functions and friends in a flash! </h3>
     </div>
-  </div>
 
-  <div class="landing-section-3">
-    <div class="ui grid">
-      <div class="ui eight wide middle aligned column">
-        <h1 class="landing-section-header">Publish your portfolio in the BowFolio directory.</h1>
-      </div>
-      <div class="ui eight wide column">
-        <img class="ui centered medium image" src="/images/directory.png">
-      </div>
-    </div>
-  </div>
-
-  <div class="landing-section-2">
-    <div class="ui grid">
-      <div class="ui eight wide column">
-        <img class="ui centered medium image" src="/images/filter.png">
-      </div>
-      <div class="ui eight wide middle aligned column">
-        <h1 class="landing-section-header">Find UH community members with similar interests.</h1>
-      </div>
-    </div>
-  </div>
-
-  <div class="landing-section-5">
-    <div class="ui grid">
+    <div class="ui grid" style="padding-bottom: 15px">
       <div class="ui center aligned sixteen wide column">
         {{> Cas_Login size="large"}}
       </div>
     </div>
+
   </div>
 
-</template>
+  <img class="ui fluid image" src="http://data.whicdn.com/images/10350255/original.jpg" style="height: 95%">
+
+
+
+</body>

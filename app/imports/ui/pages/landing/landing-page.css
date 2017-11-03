@@ -1,36 +1,11 @@
-.landing-section-1 {
-  padding: 10px 10px 30px 10px;
-  background-color: #00B5AD;
-  color: #E5F9E7;
+.ui.topmenu.menu {
+  background-color: black;
+  margin: 0px;
+  border-radius: 0px;
 }
 
-.landing-section-2 {
-  padding: 20px 10px 20px 10px;
-  background-color: #E5F9E7;
-  color:  #00B5AD;
+.ui.three.centered.row.container {
+  background-color: #f9a176;
+  width: 100%;
 }
 
-.landing-section-3 {
-  padding: 20px 10px 30px 30px;
-  background-color: #00B5AD;
-  color: #E5F9E7;
-}
-
-.landing-section-5 {
-  padding: 20px 10px 20px 10px;
-  background-color: #00B5AD;
-  color: #E5F9E7;
-}
-
-
-.landing-section-1-welcome {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  font-size: 72px;
-}
-
-.landing-section-header {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
-  font-size: 36px;
-}
